@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
-* Студент: [Андрей Войтович](https://up.htmlacademy.ru/adaptive/24/user/1468809).
-* Наставник: `Неизвестно`.
+- Студент: [Андрей Войтович](https://up.htmlacademy.ru/adaptive/24/user/1468809).
+- Наставник: [Роман Марченко](https://htmlacademy.ru/profile/id505487).
 
 ---
 
