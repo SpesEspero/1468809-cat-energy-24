@@ -1,13 +1,27 @@
+// Header
+const toggler = document.getElementById("toggler");
+const nav = document.querySelector(".header__nav");
+
+if (toggler) {
+  toggler.addEventListener("click", () => {
+    if (nav) {
+      nav.classList.toggle("active");
+    }
+  });
+}
+
 // Before/after slider
 const sliderRange = document.getElementById("range");
 const catFat = document.querySelector(".cat-fat");
 const catSkinny = document.querySelector(".cat-skinny");
 
-sliderRange.addEventListener("input", (e) => {
-  if (catFat) {
-    catFat.style.width = `${e.target.value}%`;
-  }
-  if (catSkinny) {
-    catSkinny.style.width = `${100 - e.target.value}%`;
-  }
-});
+if (sliderRange) {
+  sliderRange.addEventListener("input", (e) => {
+    if (catFat) {
+      catFat.style.width = `${e.target.value}%`;
+    }
+    if (catSkinny) {
+      catSkinny.style.width = `${100 - e.target.value}%`;
+    }
+  });
+}

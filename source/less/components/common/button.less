@@ -1,0 +1,27 @@
+.button__pseudo,
+.button__action {
+  width: 100%;
+  padding: 7px 0;
+
+  text-transform: uppercase;
+}
+
+.button__pseudo {
+  background-color: #f2f2f2;
+  color: @default_color;
+}
+
+.button__action {
+  background-color: @green;
+}
+
+@media (min-width: @tablet) {
+  .button__pseudo,
+  .button__action {
+    width: auto;
+
+    padding: 14px 26px;
+
+    font-size: 20px;
+  }
+}

@@ -2,19 +2,13 @@
   position: relative;
 
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 @side-padding;
 
   width: 100%;
 }
 
-@media (min-width: @tablet) {
-  .container {
-    padding: 0 30px;
-  }
-}
-
 @media (min-width: @desktop) {
   .container {
-    max-width: 1280px;
+    max-width: @desktop;
   }
 }
