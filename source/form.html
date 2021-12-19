@@ -36,7 +36,7 @@
         <button class="header__nav-toggle" id="toggler">
           <span>Открыть меню</span>
         </button>
-        <ul class="header__nav-list">
+        <ul class="header__nav-list header__nav-dark">
           <li class="header__nav-items">
             <a href="index.html">
               главная
@@ -55,122 +55,136 @@
 
   <main>
     <section class="program">
-      <div class="container program__wrapper">
+      <div class="container ">
         <h1 class="program__title">Подбор программы</h1>
         <p class="program__description">Заполните анкету, и мы подберем
           программу питания для вашего кота</p>
+      </div>
 
-        <form action="#" class="form">
-          <fieldset class="form__about">
+      <form action="#" class="form">
+        <fieldset class="about container">
+          <div class="about__cat line-separator">
             <div class="form__input">
-              <label for="name">ИМЯ:*</label>
+              <label class="form__input-label" for="name">ИМЯ:*</label>
               <input type="text" name="name" id="name" placeholder="Барсик" required>
             </div>
 
             <div class="form__input">
-              <label for="weight">Вес (кг):*</label>
+              <label class="form__input-label" for="weight">Вес (кг):*</label>
               <input type="text" name="weight" id="weight" placeholder="7" required>
             </div>
 
             <div class="form__input">
-              <label for="age">Возраст (лет):</label>
+              <label class="form__input-label" for="age">Возраст (лет):</label>
               <input type="text" name="age" id="age" placeholder="7" required>
             </div>
-          </fieldset>
+          </div>
 
-          <fieldset class="form__aim">
+          <div class="about__aim line-separator">
             <div class="form__radio">
               <input type="radio" name="aim" id="lose-weight" value="lose weight">
-              <label for="lose-weight">похудение</label>
+              <label class="form__radio-label" for="lose-weight">похудение</label>
             </div>
 
             <div class="form__radio">
               <input type="radio" name="aim" id="get-weight" value="get weight">
-              <label for="get-weight">Набор массы</label>
+              <label class="form__radio-label" for="get-weight">Набор массы</label>
             </div>
 
             <div class="form__radio">
               <input type="radio" name="aim" id="dont-know" value="don't know">
-              <label for="dont-know">Не знаю (Нужен ваш совет)</label>
+              <label class="form__radio-label" for="dont-know">Не знаю (Нужен ваш совет)</label>
             </div>
-          </fieldset>
+          </div>
+        </fieldset>
 
-          <fieldset class="form__contacts">
-            <h3 class="form__title">Контактные данные
-              (владельца кота)</h3>
+        <h2 class="form__title form__title-contacts cross-title">
+          <span>
+            Контактные данные
+            (владельца кота)
+          </span>
+        </h2>
+        <fieldset class="contacts form__container container">
 
-            <div class="form__input">
-              <label for="email">E-mail:*</label>
-              <input type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15" fill="none">
-                <line x1="1.65" y1="5.84766" x2="1.65" y2="13.8477" stroke="#222222" stroke-width="1.3" />
-                <line x1="18.65" y1="5.84766" x2="18.65" y2="13.8477" stroke="#222222" stroke-width="1.3" />
-                <line x1="1" y1="13.1977" x2="19" y2="13.1977" stroke="#222222" stroke-width="1.3" />
-                <line x1="1" y1="1.19766" x2="19" y2="1.19766" stroke="#222222" stroke-width="1.3" />
-                <path d="M18.35 3.02975L10 9.5242L1.65 3.02975V1.49766H4.5L10 1.49766H15H18.35V3.02975Z"
-                  stroke="#222222" stroke-width="1.3" />
-              </svg>
-            </div>
+          <div class="form__input form__input-contacts">
+            <label class="form__input-label" for="email">E-mail:*</label>
+            <input type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
+            <svg class="contacts__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15"
+              fill="none">
+              <line x1="1.65" y1="5.84766" x2="1.65" y2="13.8477" stroke="#222222" stroke-width="1.3" />
+              <line x1="18.65" y1="5.84766" x2="18.65" y2="13.8477" stroke="#222222" stroke-width="1.3" />
+              <line x1="1" y1="13.1977" x2="19" y2="13.1977" stroke="#222222" stroke-width="1.3" />
+              <line x1="1" y1="1.19766" x2="19" y2="1.19766" stroke="#222222" stroke-width="1.3" />
+              <path d="M18.35 3.02975L10 9.5242L1.65 3.02975V1.49766H4.5L10 1.49766H15H18.35V3.02975Z" stroke="#222222"
+                stroke-width="1.3" />
+            </svg>
+          </div>
 
-            <div class="form__input">
-              <label for="tel">Телефон:*</label>
-              <input type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-                <g clip-path="url(#clip0_153_253)">
-                  <path
-                    d="M17.9 9.75275H9.39999V10.9569H17.9L15.8 13.0641L16.7 13.9672L19.8 10.8565C19.8974 10.7263 19.95 10.5678 19.95 10.405C19.95 10.2421 19.8974 10.0837 19.8 9.95344L16.7 6.84277L15.8 7.74587L17.9 9.75275Z"
-                    fill="black" />
-                  <path
-                    d="M8.10001 19.7872V13.5659C8.08846 13.41 8.02154 13.2635 7.91142 13.153C7.80131 13.0425 7.65531 12.9754 7.50001 12.9638H3.10001C3.10516 13.2815 3.23325 13.5848 3.45718 13.8095C3.68112 14.0342 3.98336 14.1627 4.30001 14.1679H6.80001V19.1851H3.10001C2.86326 19.2 2.62591 19.1676 2.40176 19.0896C2.17762 19.0117 1.97115 18.8898 1.79436 18.7311C1.61757 18.5723 1.47399 18.3799 1.37196 18.165C1.26992 17.9501 1.21148 17.717 1.20001 17.4793V3.43111C1.19181 2.96681 1.36516 2.51774 1.68292 2.18013C2.00069 1.84252 2.43758 1.64322 2.90001 1.62492H6.80001V6.64212H4.40001C4.08336 6.64729 3.78112 6.77581 3.55718 7.00052C3.33325 7.22523 3.20516 7.52851 3.20001 7.84625H7.60001C7.75531 7.83466 7.90131 7.76751 8.01142 7.65701C8.12154 7.54651 8.18846 7.40002 8.20001 7.24418V0.922517C8.15232 0.76584 8.06117 0.626022 7.93721 0.519407C7.81325 0.412792 7.66161 0.343785 7.50001 0.320453H3.10001C2.70599 0.307054 2.31321 0.371716 1.94411 0.510744C1.57501 0.649771 1.23684 0.860436 0.948933 1.13069C0.661026 1.40095 0.42903 1.7255 0.266207 2.08579C0.103385 2.44608 0.01293 2.83504 1.46306e-05 3.23043V17.1782C-0.0289644 17.5773 0.0246504 17.978 0.157487 18.3552C0.290324 18.7324 0.499509 19.078 0.771886 19.3701C1.04426 19.6623 1.37394 19.8947 1.74019 20.0529C2.10643 20.211 2.50132 20.2913 2.90001 20.2889H7.50001C7.5735 20.304 7.64943 20.3022 7.72216 20.2839C7.7949 20.2655 7.86259 20.2309 7.92021 20.1828C7.97783 20.1346 8.02391 20.074 8.05504 20.0055C8.08616 19.9371 8.10153 19.8624 8.10001 19.7872Z"
-                    fill="black" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_153_253">
-                    <rect width="20" height="20.0688" fill="white" transform="translate(0 0.320435)" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </div>
-          </fieldset>
+          <div class="form__input form__input-contacts">
+            <label class="form__input-label" for="tel">Телефон:*</label>
+            <input type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90">
+            <svg class="contacts__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+              fill="none">
+              <g clip-path="url(#clip0_153_253)">
+                <path
+                  d="M17.9 9.75275H9.39999V10.9569H17.9L15.8 13.0641L16.7 13.9672L19.8 10.8565C19.8974 10.7263 19.95 10.5678 19.95 10.405C19.95 10.2421 19.8974 10.0837 19.8 9.95344L16.7 6.84277L15.8 7.74587L17.9 9.75275Z"
+                  fill="black" />
+                <path
+                  d="M8.10001 19.7872V13.5659C8.08846 13.41 8.02154 13.2635 7.91142 13.153C7.80131 13.0425 7.65531 12.9754 7.50001 12.9638H3.10001C3.10516 13.2815 3.23325 13.5848 3.45718 13.8095C3.68112 14.0342 3.98336 14.1627 4.30001 14.1679H6.80001V19.1851H3.10001C2.86326 19.2 2.62591 19.1676 2.40176 19.0896C2.17762 19.0117 1.97115 18.8898 1.79436 18.7311C1.61757 18.5723 1.47399 18.3799 1.37196 18.165C1.26992 17.9501 1.21148 17.717 1.20001 17.4793V3.43111C1.19181 2.96681 1.36516 2.51774 1.68292 2.18013C2.00069 1.84252 2.43758 1.64322 2.90001 1.62492H6.80001V6.64212H4.40001C4.08336 6.64729 3.78112 6.77581 3.55718 7.00052C3.33325 7.22523 3.20516 7.52851 3.20001 7.84625H7.60001C7.75531 7.83466 7.90131 7.76751 8.01142 7.65701C8.12154 7.54651 8.18846 7.40002 8.20001 7.24418V0.922517C8.15232 0.76584 8.06117 0.626022 7.93721 0.519407C7.81325 0.412792 7.66161 0.343785 7.50001 0.320453H3.10001C2.70599 0.307054 2.31321 0.371716 1.94411 0.510744C1.57501 0.649771 1.23684 0.860436 0.948933 1.13069C0.661026 1.40095 0.42903 1.7255 0.266207 2.08579C0.103385 2.44608 0.01293 2.83504 1.46306e-05 3.23043V17.1782C-0.0289644 17.5773 0.0246504 17.978 0.157487 18.3552C0.290324 18.7324 0.499509 19.078 0.771886 19.3701C1.04426 19.6623 1.37394 19.8947 1.74019 20.0529C2.10643 20.211 2.50132 20.2913 2.90001 20.2889H7.50001C7.5735 20.304 7.64943 20.3022 7.72216 20.2839C7.7949 20.2655 7.86259 20.2309 7.92021 20.1828C7.97783 20.1346 8.02391 20.074 8.05504 20.0055C8.08616 19.9371 8.10153 19.8624 8.10001 19.7872Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_153_253">
+                  <rect width="20" height="20.0688" fill="white" transform="translate(0 0.320435)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </fieldset>
 
-          <fieldset class="form__comment">
-            <h3 class="form__title">Комментарий</h3>
-            <textarea class="form__textarea" name="comment" id="textarea"
-              placeholder="Расскажите обо всех повадках кота"></textarea>
-          </fieldset>
+        <h2 class="form__title form__title-comments cross-title">
+          <span>Комментарий</span>
+        </h2>
+        <fieldset class="form__comment form__container container">
+          <textarea class="form__textarea" name="comment" id="textarea"
+            placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
 
-          <fieldset class="form__additional">
-            <h3 class="form__title">Дополнительно</h3>
-            <div class="form__checkbox">
-              <input type="checkbox" id="sugar" name="additional" value="sugar">
-              <label for="sugar">сахарозаменитель</label>
-            </div>
+        <h2 class="form__title cross-title">
+          <span>Дополнительно</span>
+        </h2>
+        <fieldset class="optional  container">
+          <div class="form__checkbox">
+            <input type="checkbox" id="sugar" name="additional" value="sugar">
+            <label class="form__checkbox-label" for="sugar">сахарозаменитель</label>
+          </div>
 
-            <div class="form__checkbox">
-              <input type="checkbox" id="water" name="additional" value="water">
-              <label for="water">питьевая вода</label>
-            </div>
+          <div class="form__checkbox">
+            <input type="checkbox" id="water" name="additional" value="water">
+            <label class="form__checkbox-label" class="form__checkbox-label" for="water">питьевая вода</label>
+          </div>
 
-            <div class="form__checkbox">
-              <input type="checkbox" id="milk" name="additional" value="milk">
-              <label for="milk">молоко</label>
-            </div>
+          <div class="form__checkbox">
+            <input type="checkbox" id="milk" name="additional" value="milk">
+            <label class="form__checkbox-label" class="form__checkbox-label" for="milk">молоко</label>
+          </div>
 
-            <div class="form__checkbox">
-              <input type="checkbox" id="vitamins" name="additional" value="vitamins">
-              <label for="vitamins">молоко</label>
-            </div>
-          </fieldset>
+          <div class="form__checkbox">
+            <input type="checkbox" id="vitamins" name="additional" value="vitamins">
+            <label class="form__checkbox-label" class="form__checkbox-label" for="vitamins">витамины</label>
+          </div>
+        </fieldset>
 
+        <div class="container submit">
+          <button class="submit__button button__action" type="submit">отправить заявку</button>
+          <p class="submit__info">* — Обязательные поля</p>
+        </div>
 
-          <button class="form__button action__button" type="submit">отправить заявку</button>
-          <p class="form__info">* — Обязательные поля</p>
-
-        </form>
+      </form>
       </div>
     </section>
 
-    <section class="location">
+    <section class="location location-dark location-form">
       <div class="location__info">
         <p class="location__invitation">приглашаем к сотрудничеству дилеров!</p>
 
@@ -188,7 +202,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer footer-dark">
     <div class="container footer__wrapper">
       <a href="#" class="footer__logo">
         <img src="img/main-page/header/logo-text/logo-mobile-text.svg" alt="Logo text" />

@@ -1,5 +1,6 @@
 .example {
   padding-top: 25px;
+  padding-bottom: 40px;
 
   background: #eaeaea;
 }
@@ -63,14 +64,16 @@
 .example__result {
   margin-top: 34px;
 
-  text-align: center;
   width: 100%;
+
+  .oswald-family();
+  text-align: center;
+  text-transform: uppercase;
 
   color: @black;
 }
 
 .example__slider {
-  height: 357px;
   width: 100%;
 }
 
@@ -116,9 +119,18 @@
 }
 
 .example__control {
+  margin: 15px auto 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 13px;
+
   text-transform: uppercase;
   color: @black;
   font-size: 16px;
+
+  width: 80%;
 }
 
 @media (min-resolution: 2dppx) {
@@ -142,6 +154,7 @@
 @media (min-width: @tablet) {
   .example {
     padding-top: 43px;
+    padding-bottom: 62px;
 
     background: linear-gradient(@white 0% 60%, #eaeaea 60% 100%);
   }
@@ -152,6 +165,10 @@
 
   .example__info {
     margin-bottom: 72px;
+
+    align-items: center;
+
+    justify-content: space-between;
   }
 
   .example__text {
@@ -160,14 +177,35 @@
     width: 100%;
   }
 
+  .example__statistic {
+    width: auto;
+
+    justify-content: flex-start;
+  }
+
   .example__statistic-item {
+    width: 162px;
+
+    &:first-child {
+      margin-right: 42px;
+    }
+
     & p {
       background-color: @white;
+      width: auto;
+
+      white-space: nowrap;
+
+      bottom: -10px;
     }
   }
 
-  .example__slider {
-    height: 600px;
+  .example__result {
+    font-size: 20px;
+    text-align: right;
+
+    margin-top: 0;
+    width: 174px;
   }
 
   .example__wrapper {
@@ -211,6 +249,7 @@
 @media (min-width: @desktop) {
   .example {
     padding-top: 69px;
+    padding-bottom: 75px;
 
     background: linear-gradient(@white 0% 136px, #eaeaea 236px 100%);
   }
@@ -221,6 +260,8 @@
 
   .example__info {
     margin-bottom: 0;
+
+    max-width: 436px;
   }
 
   .example__statistic-item {
@@ -231,5 +272,14 @@
 
   .example__slider {
     margin-top: -140px;
+  }
+
+  .example__result {
+    width: 100%;
+    text-align: left;
+
+    & span {
+      margin-left: 63px;
+    }
   }
 }

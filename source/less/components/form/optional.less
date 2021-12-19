@@ -1,0 +1,22 @@
+.optional {
+  margin-bottom: 34px;
+}
+
+@media (min-width: @tablet) {
+  .optional {
+    margin-bottom: 54px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .optional {
+    margin-bottom: 61px;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

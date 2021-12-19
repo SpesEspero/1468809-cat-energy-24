@@ -17,11 +17,11 @@ const catSkinny = document.querySelector(".cat-skinny");
 
 if (sliderRange) {
   sliderRange.addEventListener("input", (e) => {
-    if (catFat) {
-      catFat.style.width = `${e.target.value}%`;
-    }
     if (catSkinny) {
-      catSkinny.style.width = `${100 - e.target.value}%`;
+      catSkinny.style.width = `${e.target.value}%`;
+    }
+    if (catFat) {
+      catFat.style.width = `${100 - e.target.value}%`;
     }
   });
 }

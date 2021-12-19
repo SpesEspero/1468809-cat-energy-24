@@ -111,6 +111,28 @@
   &:last-child {
     border-bottom: 1px solid #e6e6e6;
   }
+
+  & a {
+    position: relative;
+  }
+
+  & a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: @green;
+
+    transition: width 0.15s linear;
+  }
+
+  &:hover a::after {
+    width: 100%;
+  }
 }
 
 @media (min-width: @tablet) {
@@ -183,6 +205,10 @@
     color: @white;
 
     font-size: 20px;
+
+    & a::after {
+      background-color: @white;
+    }
   }
 
   .header__nav-dark {
