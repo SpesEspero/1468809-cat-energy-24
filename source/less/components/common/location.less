@@ -1,0 +1,78 @@
+.location-dark .location__info {
+  background-color: #f2f2f2;
+}
+
+.location-catalog,
+.location-form {
+  padding-top: 35px;
+}
+
+.location__info {
+  padding: 26px 20px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.location__invitation {
+  color: #111111;
+  text-transform: uppercase;
+
+  font-size: 16px;
+}
+
+.location__invitation,
+.location__addres {
+  max-width: 138px;
+}
+
+@media (min-width: @tablet) {
+  .location-catalog,
+  .location-form {
+    padding-top: 76px;
+  }
+
+  .location__info {
+    padding: 56px 70px 60px;
+  }
+
+  .location__map iframe {
+    height: 400px;
+  }
+
+  .location__invitation,
+  .location__addres {
+    max-width: 172px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .location {
+    position: relative;
+  }
+
+  .location-catalog,
+  .location-form {
+    padding-top: 0;
+    margin-top: 86px;
+  }
+
+  .location__info {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+
+    padding: 56px 80px 60px;
+
+    background-color: @white;
+  }
+
+  .location__invitation {
+    margin-right: 87px;
+  }
+
+  .location__invitation,
+  .location__addres {
+    max-width: 160px;
+  }
+}
