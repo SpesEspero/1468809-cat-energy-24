@@ -38,7 +38,7 @@
 
   &.basket::before {
     background: url("../../img/main-page/howItWorks/basket.svg") center
-      no-repeat,
+        no-repeat,
       @green;
   }
 
@@ -56,6 +56,9 @@
 @media (min-width: @tablet) {
   .howItWorks {
     padding-top: 45px;
+    padding-bottom: 0;
+
+    border-bottom: 1px solid #e6e6e6;
   }
 
   .howItWorks__title {
@@ -74,6 +77,8 @@
 
   .howItWorks__item {
     position: relative;
+
+    justify-self: center;
 
     width: 247px;
     height: 280px;
@@ -113,6 +118,8 @@
 @media (min-width: @desktop) {
   .howItWorks {
     padding-top: 71px;
+
+    border-bottom: 0;
   }
 
   .howItWorks__list {
