@@ -227,9 +227,11 @@
     }
   }
 
-  .header__nav-dark {
-    & .header__nav-items {
-      color: @black;
+  .header__nav-dark .header__nav-items {
+    color: @black;
+
+    & a::after {
+      background-color: @black;
     }
   }
 }

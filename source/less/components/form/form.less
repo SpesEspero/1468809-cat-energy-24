@@ -63,13 +63,25 @@
   position: relative;
   margin-bottom: 35px;
 
+  line-height: 26px;
+
   & span {
     background-color: @white;
   }
 }
 
 .form__title-contacts span {
-  width: 209px;
+  max-width: 209px;
+}
+
+@media (min-width: 561px) {
+  .form__title {
+    line-height: 1;
+  }
+
+  .form__title-contacts span {
+    max-width: 309px;
+  }
 }
 
 @media (min-width: @tablet) {
@@ -105,7 +117,7 @@
   }
 
   .form__title-contacts span {
-    width: auto;
+    max-width: initial;
   }
 }
 
