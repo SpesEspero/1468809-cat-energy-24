@@ -3,14 +3,20 @@
 }
 
 .additional__title {
+  position: relative;
+
   margin-bottom: 36px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid #ebebeb;
 
   & span {
     background-color: @white;
   }
 
-  &::after {
-    top: -20px;
+  &::before {
+    top: 75%;
   }
 }
 
@@ -78,7 +84,14 @@
   }
 
   .additional__title {
+    padding-top: 0;
+    border-top: 0;
+
     margin-bottom: 80px;
+
+    &::before {
+      top: 57%;
+    }
   }
 
   .additional__item {
@@ -123,7 +136,7 @@
     height: 200px;
 
     background: url("../../../img/catalog/gift/backgroud/x1/image-tablet.jpg")
-      center no-repeat,
+        center no-repeat,
       @green;
     background-size: cover;
   }
@@ -131,7 +144,7 @@
   @media (min-resolution: 2dppx) {
     .additional__surprise {
       background: url("../../../img/catalog/gift/backgroud/x2/image-tablet@2x.jpg")
-        center no-repeat,
+          center no-repeat,
         @green;
       background-size: cover;
     }
@@ -201,7 +214,7 @@
     height: 289px;
 
     background: url("../../../img/catalog/gift/backgroud/x1/image-desktop.jpg")
-      center no-repeat,
+        center no-repeat,
       @green;
     background-size: cover;
   }
@@ -209,7 +222,7 @@
   @media (min-resolution: 2dppx) {
     .additional__surprise {
       background: url("../../../img/catalog/gift/backgroud/x2/image-desktop@2x.jpg")
-        center no-repeat,
+          center no-repeat,
         @green;
       background-size: cover;
     }
