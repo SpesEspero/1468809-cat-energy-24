@@ -23,11 +23,11 @@
   }
 
   .example__range::-webkit-slider-thumb {
-    border: 1px solid @@green;
+    border: 1px solid @green;
     height: 6px;
     width: 35px;
     border-radius: 50px;
-    background: @@green;
+    background: @green;
     cursor: pointer;
     appearance: none;
     margin-top: 3px;
@@ -47,11 +47,11 @@
   }
 
   .example__range::-moz-range-thumb {
-    border: 1px solid @@green;
+    border: 1px solid @green;
     height: 6px;
     width: 35px;
     border-radius: 50px;
-    background: @@green;
+    background: @green;
     cursor: pointer;
   }
 
@@ -78,11 +78,11 @@
 
   .example__range::-ms-thumb {
     margin-top: 1px;
-    border: 1px solid @@green;
+    border: 1px solid @green;
     height: 6px;
     width: 35px;
     border-radius: 50px;
-    background: @@green;
+    background: @green;
     cursor: pointer;
   }
 
@@ -113,11 +113,7 @@
     height: 34px;
     width: 34px;
     border-radius: 50%;
-    background: radial-gradient(
-      circle closest-side,
-      @@green 0 3px,
-      #ffffff 4px
-    );
+    background: radial-gradient(circle closest-side, @green 0 3px, #ffffff 4px);
     cursor: pointer;
     appearance: none;
     margin-top: -14.5px;

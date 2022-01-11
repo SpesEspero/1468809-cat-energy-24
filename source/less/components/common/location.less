@@ -16,6 +16,7 @@
 
 .location__invitation {
   color: #111111;
+  .oswald-family();
   text-transform: uppercase;
 
   font-size: 16px;
@@ -24,6 +25,12 @@
 .location__invitation,
 .location__addres {
   max-width: 138px;
+
+  line-height: 20px;
+}
+
+.location__map iframe {
+  display: block;
 }
 
 @media (min-width: @tablet) {
@@ -33,7 +40,7 @@
   }
 
   .location__info {
-    padding: 56px 70px 60px;
+    padding: 60px 70px 56px;
   }
 
   .location__map iframe {
@@ -43,6 +50,21 @@
   .location__invitation,
   .location__addres {
     max-width: 172px;
+  }
+
+  .location__invitation {
+    line-height: 26px;
+
+    font-size: 20px;
+  }
+
+  .location__addres {
+    text-align: right;
+  }
+
+  .location__addres-city {
+    display: block;
+    margin-top: 20px;
   }
 }
 
@@ -62,7 +84,7 @@
     top: 95px;
     left: 110px;
 
-    padding: 56px 80px 60px;
+    padding: 60px 80px 56px;
 
     background-color: @white;
   }
@@ -74,5 +96,9 @@
   .location__invitation,
   .location__addres {
     max-width: 160px;
+  }
+
+  .location__addres {
+    text-align: left;
   }
 }
