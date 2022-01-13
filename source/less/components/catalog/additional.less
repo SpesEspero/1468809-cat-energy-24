@@ -1,16 +1,22 @@
 .additional {
-  padding-top: 50px;
+  padding-top: 25px;
 }
 
 .additional__title {
+  position: relative;
+
   margin-bottom: 36px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #ebebeb;
 
   & span {
     background-color: @white;
   }
 
-  &::after {
-    top: -20px;
+  &::before {
+    top: 75%;
   }
 }
 
@@ -33,7 +39,12 @@
 
   justify-content: space-between;
 
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.additional__button {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .additional__surprise {
@@ -78,7 +89,14 @@
   }
 
   .additional__title {
+    padding-top: 0;
+    border-top: 0;
+
     margin-bottom: 80px;
+
+    &::before {
+      top: 57%;
+    }
   }
 
   .additional__item {
@@ -119,7 +137,7 @@
 
     margin: 57px auto 0;
 
-    width: min(100%, 707px);
+    width: 707px;
     height: 200px;
 
     background: url("../../../img/catalog/gift/backgroud/x1/image-tablet.jpg")
