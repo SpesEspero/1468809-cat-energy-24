@@ -44,12 +44,19 @@
 .product__image {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+
+  & img {
+    display: block;
+  }
 }
 
 .product__info {
   .arial-family();
 
   width: 100%;
+
+  font-size: 12px;
 }
 
 .product__description {
@@ -61,6 +68,14 @@
 
 .product__button {
   margin-top: 17px;
+}
+
+.product__button,
+.more__button {
+  font-size: 16px;
+
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 // More
@@ -145,6 +160,10 @@
     position: relative;
 
     background-color: #f2f2f2;
+  }
+
+  .product__info {
+    font-size: 16px;
   }
 
   .product__description {
