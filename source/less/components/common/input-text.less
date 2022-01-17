@@ -1,0 +1,56 @@
+.input__text {
+  padding: 0 15px;
+
+  height: 45px;
+
+  font-size: 16px;
+
+  border: none;
+  outline: none;
+
+  box-shadow: 0 0 0 1px #e7e7e7;
+
+  transition: box-shadow 0.15s linear;
+
+  &::placeholder {
+    color: @default_color;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 1px #cdcdcd;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px #444444;
+  }
+
+  &:invalid {
+    box-shadow: 0 0 0 2px #ff8282;
+  }
+
+  &:focus ~ svg *[fill] {
+    fill: @green;
+  }
+
+  &:focus ~ svg *[stroke] {
+    stroke: @green;
+  }
+
+  &:invalid ~ svg *[fill] {
+    fill: #ff8282;
+  }
+
+  &:invalid ~ svg *[stroke] {
+    stroke: #ff8282;
+  }
+}
+
+@media (min-width: @tablet) {
+  .input__text {
+    font-size: 20px;
+
+    padding: 0 19px;
+
+    height: 52px;
+  }
+}

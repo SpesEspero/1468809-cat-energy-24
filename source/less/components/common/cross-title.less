@@ -1,5 +1,9 @@
 .cross-title {
-  padding: 0 var(--side-padding);
+  position: relative;
+
+  & > * {
+    padding: 0 var(--side-padding);
+  }
 
   & span {
     display: inline-block;
@@ -36,7 +40,7 @@
 }
 
 @media (min-width: @desktop) {
-  .cross-title {
+  .cross-title > * {
     padding: 0;
     margin-left: auto;
     margin-right: auto;
@@ -51,8 +55,8 @@
 }
 
 @media (min-width: 1320px) {
-  .cross-title {
-    max-width: 1320px;
+  .cross-title > * {
+    max-width: 1300px;
 
     & span {
       padding: 0 40px;

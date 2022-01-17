@@ -1,0 +1,26 @@
+.input__radio-checkmark {
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 13.5px;
+    height: 13.5px;
+    border-radius: 50%;
+    background: @green;
+  }
+}
+
+@media (min-width: @tablet) {
+  .input__radio-container .input__radio-checkmark::after {
+    width: 18px;
+    height: 18px;
+  }
+}

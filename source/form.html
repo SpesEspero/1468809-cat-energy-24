@@ -13,7 +13,7 @@
   <header class="header header-form">
     <div class="container header__wrapper">
       <a href="index.html" class="header__logo">
-        <picture >
+        <picture>
           <source media="(max-width: 767px)" srcset="img/main-page/header/logo-icon/logo-mobile-icon.svg" />
           <source media="(min-width: 768px) and (max-width: 1279px)"
             srcset="img/main-page/header/logo-icon/logo-tablet-icon.svg" />
@@ -21,7 +21,7 @@
           <img class="header__logo-image" src="img/main-page/header/logo-icon/logo-mobile-icon.svg" alt="Logo" />
         </picture>
 
-        <picture >
+        <picture>
           <source media="(max-width: 767px)" srcset="img/main-page/header/logo-text/logo-mobile-text.svg" />
           <source media="(min-width: 768px) and (max-width: 1279px)"
             srcset="img/main-page/header/logo-text/logo-tablet-text.svg" />
@@ -64,49 +64,60 @@
           <div class="about__cat line-separator">
             <div class="form__input">
               <label class="form__input-label" for="name">ИМЯ:*</label>
-              <input type="text" name="name" id="name" placeholder="Барсик" required>
+              <input class="input__text" type="text" name="name" id="name" placeholder="Барсик">
             </div>
 
             <div class="form__input">
               <label class="form__input-label" for="weight">Вес (кг):*</label>
-              <input type="text" name="weight" id="weight" placeholder="7" required>
+              <input class="input__text" type="text" name="weight" id="weight" placeholder="7">
             </div>
 
             <div class="form__input">
               <label class="form__input-label" for="age">Возраст (лет):</label>
-              <input type="text" name="age" id="age" placeholder="7" required>
+              <input class="input__text" type="text" name="age" id="age" placeholder="7">
             </div>
           </div>
 
           <div class="about__aim line-separator">
             <div class="form__radio">
-              <input type="radio" name="aim" id="lose-weight" value="lose weight">
-              <label class="form__radio-label" for="lose-weight">похудение</label>
+              <label class="form__radio-label input__radio-container" for="lose-weight">
+                <input class="input__radio" type="radio" name="aim" id="lose-weight" value="lose weight">
+                <span class="input__radio-checkmark"></span>
+                <span class="input__radio-text">похудение</span>
+              </label>
             </div>
 
             <div class="form__radio">
-              <input type="radio" name="aim" id="get-weight" value="get weight">
-              <label class="form__radio-label" for="get-weight">Набор массы</label>
+              <label class="form__radio-label input__radio-container" for="get-weight">
+                <input class="input__radio" type="radio" name="aim" id="get-weight" value="get weight">
+                <span class="input__radio-checkmark"></span>
+                <span class="input__radio-text">Набор массы</span>
+              </label>
             </div>
 
             <div class="form__radio">
-              <input type="radio" name="aim" id="dont-know" value="don't know">
-              <label class="form__radio-label" for="dont-know">Не знаю (Нужен ваш совет)</label>
+              <label class="form__radio-label input__radio-container" for="dont-know">
+                <input class="input__radio" type="radio" name="aim" id="dont-know" value="don't know">
+                <span class="input__radio-checkmark"></span>
+                <span class="input__radio-text">Не знаю (Нужен ваш совет)</span>
+              </label>
             </div>
           </div>
         </fieldset>
 
-        <h2 class="form__title form__title-contacts cross-title">
-          <span>
-            Контактные данные
-            (владельца кота)
-          </span>
-        </h2>
+        <div class="cross-title">
+          <h2 class="form__title form__title-contacts ">
+            <span>
+              Контактные данные
+              (владельца кота)
+            </span>
+          </h2>
+        </div>
         <fieldset class="contacts form__container container container-form">
 
           <div class="form__input form__input-contacts">
             <label class="form__input-label" for="email">E-mail:*</label>
-            <input type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
+            <input class="input__text" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
             <svg class="contacts__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15"
               fill="none">
               <line x1="1.65" y1="5.84766" x2="1.65" y2="13.8477" stroke="#222222" stroke-width="1.3" />
@@ -120,7 +131,7 @@
 
           <div class="form__input form__input-contacts">
             <label class="form__input-label" for="tel">Телефон:*</label>
-            <input type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90">
+            <input class="input__text" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90">
             <svg class="contacts__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
               fill="none">
               <g clip-path="url(#clip0_153_253)">
@@ -140,36 +151,52 @@
           </div>
         </fieldset>
 
-        <h2 class="form__title form__title-comments cross-title">
-          <span>Комментарий</span>
-        </h2>
+        <div class="cross-title">
+          <h2 class="form__title form__title-comments ">
+            <span>Комментарий</span>
+          </h2>
+        </div>
         <fieldset class="form__comment form__container container container-form">
           <textarea class="form__textarea" name="comment" id="textarea"
             placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
-        <h2 class="form__title cross-title">
-          <span>Дополнительно</span>
-        </h2>
+        <div class="cross-title">
+          <h2 class="form__title ">
+            <span>Дополнительно</span>
+          </h2>
+        </div>
         <fieldset class="optional  container container-form">
           <div class="form__checkbox">
-            <input type="checkbox" id="sugar" name="additional" value="sugar">
-            <label class="form__checkbox-label" for="sugar">сахарозаменитель</label>
+            <label class="form__checkbox-label" for="sugar">
+              <input class="input__checkbox" type="checkbox" id="sugar" name="additional" value="sugar">
+              <span class="input__checkbox-checkmark"></span>
+              <span class="input__checkbox-text">сахарозаменитель</span>
+            </label>
           </div>
 
           <div class="form__checkbox">
-            <input type="checkbox" id="water" name="additional" value="water">
-            <label class="form__checkbox-label" class="form__checkbox-label" for="water">питьевая вода</label>
+            <label class="form__checkbox-label" for="water">
+              <input class="input__checkbox" type="checkbox" id="water" name="additional" value="water">
+              <span class="input__checkbox-checkmark"></span>
+              <span class="input__checkbox-text">питьевая вода</span>
+            </label>
           </div>
 
           <div class="form__checkbox">
-            <input type="checkbox" id="milk" name="additional" value="milk">
-            <label class="form__checkbox-label" class="form__checkbox-label" for="milk">молоко</label>
+            <label  class="form__checkbox-label" for="milk">
+              <input class="input__checkbox" type="checkbox" id="milk" name="additional" value="milk">
+              <span class="input__checkbox-checkmark"></span>
+              <span class="input__checkbox-text">молоко</span>
+            </label>
           </div>
 
           <div class="form__checkbox">
-            <input type="checkbox" id="vitamins" name="additional" value="vitamins">
-            <label class="form__checkbox-label" class="form__checkbox-label" for="vitamins">витамины</label>
+            <label class="form__checkbox-label" for="vitamins">
+              <input class="input__checkbox" type="checkbox" id="vitamins" name="additional" value="vitamins">
+              <span class="input__checkbox-checkmark"></span>
+              <span class="input__checkbox-text">витамины</span>
+            </label>
           </div>
         </fieldset>
 

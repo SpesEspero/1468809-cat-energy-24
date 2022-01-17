@@ -1,0 +1,58 @@
+/* Radio Input */
+.input__radio-container,
+.input__checkbox-container {
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.input__radio,
+.input__checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.input__radio-checkmark,
+.input__checkbox-checkmark {
+  position: relative;
+
+  height: 30px;
+  width: 30px;
+  border: 1px solid #cdcdcd;
+
+  transition: border 0.15s linear;
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.form__radio-label:hover .input__radio-checkmark,
+.form__checkbox-label:hover .input__checkbox-checkmark {
+  border: 1px solid #bababa;
+}
+
+.input__radio:checked ~ .input__radio-checkmark::after,
+.input__checkbox:checked ~ .input__checkbox-checkmark::after {
+  display: block;
+}
+
+.input__radio-text,
+.input__checkbox-text {
+  margin-left: 16px;
+}
+
+@media (min-width: @tablet) {
+  .input__radio-checkmark,
+  .input__checkbox-checkmark {
+    height: 40px;
+    width: 40px;
+  }
+
+  .input__radio-text,
+  .input__checkbox-text {
+    margin-left: 20px;
+  }
+}
