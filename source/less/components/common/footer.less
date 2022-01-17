@@ -13,6 +13,16 @@
 
 .footer__logo {
   padding-bottom: 32px;
+
+  transition: opacity 0.15s linear;
+
+  :hover {
+    opacity: 0.8;
+  }
+
+  :active {
+    opacity: 0.6;
+  }
 }
 
 .footer__contacts {
@@ -33,6 +43,20 @@
 
   & a:last-child {
     margin-right: 0;
+  }
+}
+
+.footer__contacts-icon svg {
+  & path {
+    transition: all 0.15s linear;
+  }
+
+  &:hover path {
+    stroke: @green;
+  }
+
+  &:active path {
+    stroke: #c9e0ba;
   }
 }
 
@@ -83,5 +107,25 @@
 @media (min-width: @desktop) {
   .footer__wrapper {
     padding-top: 60px;
+  }
+
+  .academy__icon path {
+    transition: fill 0.15s linear;
+  }
+
+  .footer__academy {
+    transition: opacity 0.3s linear;
+  }
+
+  .footer__academy:hover path {
+    fill: @green;
+  }
+
+  .footer__academy:active path {
+    fill: rgba(104, 183, 56, 0.3);
+  }
+
+  .footer__academy:active {
+    opacity: 0.3;
   }
 }

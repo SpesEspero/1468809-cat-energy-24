@@ -70,9 +70,59 @@
 
   text-transform: uppercase;
   font-size: 16px;
+  color: @black;
 
-  & .advantages__icon {
-    margin-left: 15px;
+  &:active {
+    color: #b3b3b3;
+  }
+
+  &:hover .advantages__icon {
+    width: 26px;
+  }
+}
+
+.advantages__link:active .advantages__icon {
+  background: #b3b3b3;
+
+  &::after {
+    border-left-color: #b3b3b3;
+  }
+}
+
+.advantages__icon {
+  display: inline-block;
+
+  width: 18px;
+  height: 2px;
+  background-color: @black;
+
+  vertical-align: middle;
+  margin-left: 15px;
+
+  position: relative;
+
+  transition: width 0.15s linear;
+
+  &::after {
+    content: "";
+
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    right: -9px;
+
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-left: 9px solid @black;
+    border-bottom: 4px solid transparent;
+
+    transform: translateY(-50%);
+  }
+
+  &:hover::after {
+    border-left: 9px solid @black;
   }
 }
 
