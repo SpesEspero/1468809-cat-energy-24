@@ -1,5 +1,5 @@
 .input__text {
-  padding: 0 15px;
+  padding: 0 50px 0 15px;
 
   height: 45px;
 
@@ -28,6 +28,10 @@
     box-shadow: 0 0 0 2px #ff8282;
   }
 
+  & ~ svg {
+    pointer-events: none;
+  }
+
   &:focus ~ svg *[fill] {
     fill: @green;
   }
@@ -49,7 +53,7 @@
   .input__text {
     font-size: 20px;
 
-    padding: 0 19px;
+    padding: 0 50px 0 19px;
 
     height: 52px;
   }
