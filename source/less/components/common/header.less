@@ -188,21 +188,15 @@
   .header__nav {
     margin-left: auto;
     margin-right: 0;
-
-    width: 67%;
   }
 
   .header__nav-list {
     position: relative;
 
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 16px;
+    display: flex;
   }
 
   .header__nav-items {
-    padding: 0;
-
     display: flex;
     justify-content: flex-end;
 
@@ -211,8 +205,28 @@
 
     border: none;
 
+    & a {
+      padding: 0 17px;
+    }
+
     &:last-child {
       border: none;
+    }
+
+    &:last-child a {
+      padding-right: 0;
+    }
+
+    & a::after {
+      left: 17px;
+    }
+
+    &.active a::after {
+      width: calc(100% - 34px);
+    }
+
+    &:last-child.active a::after {
+      width: calc(100% - 17px);
     }
   }
 }
@@ -237,11 +251,6 @@
 
   .header__logo-image {
     margin-right: 14px;
-  }
-
-  //Nav
-  .header__nav {
-    width: 48%;
   }
 
   .header__nav-items {

@@ -46,18 +46,17 @@
   }
 }
 
-.footer__contacts-icon svg {
-  & path {
-    transition: all 0.15s linear;
-  }
+.footer__contacts-icon use {
+  color: #666666;
+  transition: color 0.15s linear;
+}
 
-  &:hover path {
-    stroke: @green;
-  }
+.footer__contacts-icon:hover use {
+  color: @green;
+}
 
-  &:active path {
-    stroke: #c9e0ba;
-  }
+.footer__contacts-icon:active use {
+  color: #c9e0ba;
 }
 
 .footer__academy {
@@ -68,6 +67,21 @@
   width: 100%;
 
   padding-top: 22px;
+}
+
+.vk__icon {
+  width: 23px;
+  height: 16px;
+}
+
+.inst__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.facebook__icon {
+  width: 22px;
+  height: 22px;
 }
 
 @media (min-width: @tablet) {
@@ -102,6 +116,13 @@
 
     width: 164px;
   }
+
+  .vk__icon,
+  .inst__icon,
+  .facebook__icon {
+    width: inherit;
+    height: inherit;
+  }
 }
 
 @media (min-width: @desktop) {
@@ -109,20 +130,22 @@
     padding-top: 60px;
   }
 
-  .academy__icon path {
-    transition: fill 0.15s linear;
+  .academy__icon {
+    color: #666666;
+
+    transition: color 0.15s linear;
   }
 
   .footer__academy {
     transition: opacity 0.3s linear;
   }
 
-  .footer__academy:hover path {
-    fill: @green;
+  .footer__academy:hover .academy__icon {
+    color: @green;
   }
 
-  .footer__academy:active path {
-    fill: rgba(104, 183, 56, 0.3);
+  .footer__academy:active .academy__icon {
+    color: @green;
   }
 
   .footer__academy:active {
