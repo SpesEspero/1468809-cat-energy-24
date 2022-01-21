@@ -67,8 +67,11 @@
 }
 
 @media (min-width: @desktop) {
-  .location {
+  .location__wrapper {
     position: relative;
+
+    max-width: @desktop;
+    margin: 0 auto;
   }
 
   .location-catalog,
@@ -80,7 +83,7 @@
   .location__info {
     position: absolute;
     top: 95px;
-    left: 110px;
+    left: var(--side-padding);
 
     padding: 60px 80px 56px;
 
