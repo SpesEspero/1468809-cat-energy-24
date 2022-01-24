@@ -73,7 +73,23 @@
   <main class="main">
     <section class="intro">
       <div class="container intro__container">
-        <div class="intro__background"></div>
+        <picture>
+          <source media="(max-width: 767px)"
+            srcset="img/main-page/intro/background/1x/background-mobile.webp 1x, img/main-page/intro/background/2x/background-mobile@2x.webp 2x"
+            type="image/webp" />
+          <source media="(max-width: 767px)"
+            srcset="img/main-page/intro/background/1x/background-mobile.jpg 1x, img/main-page/intro/background/2x/background-mobile@2x.jpg 2x"
+            type="image/png" />
+
+          <source
+            srcset="img/main-page/intro/background/1x/background-desktop.webp 1x, img/main-page/intro/background/2x/background-desktop@2x.webp 2x"
+            type="image/webp" media="(min-width: 1280px)" />
+          <source
+            srcset="img/main-page/intro/background/1x/background-desktop.jpg 1x, img/main-page/intro/background/2x/background-desktop@2x.jpg 2x"
+            type="image/png" media="(min-width: 1280px)" />
+
+          <img class="intro__background" src="img/main-page/intro/background/1x/background-desktop.jpg" alt="Can" />
+        </picture>
 
         <div class="intro__text">
           <h1 class="intro__title">
@@ -83,15 +99,32 @@
           <p class="intro__subtitle">Занялся собой? Займись котом!</p>
         </div>
 
-        <picture class="intro__image">
-          <source media="(max-width: 767px)"
-            srcset="img/main-page/intro/can/1x/index-can-mobile.png 1x, img/main-page/intro/can/2x/index-can-mobile@2x.png 2x" />
-          <source media="(min-width: 768px) and (max-width: 1279px)"
-            srcset="img/main-page/intro/can/1x/index-can-tablet.jpg 1x, img/main-page/intro/can/2x/index-can-tablet@2x.jpg 2x" />
-          <source media="(min-width: 1280px)"
-            srcset="img/main-page/intro/can/1x/index-can-desktop.png 1x, img/main-page/intro/can/2x/index-can-desktop@2x.png 2x" />
-          <img src="img/main-page/intro/can/1x/index-can-tablet.jpg" alt="Can" />
-        </picture>
+        <div class="intro__image">
+          <picture>
+            <source media="(max-width: 767px)"
+              srcset="img/main-page/intro/can/1x/index-can-mobile.webp 1x, img/main-page/intro/can/2x/index-can-mobile@2x.webp 2x"
+              type="image/webp" />
+            <source media="(max-width: 767px)"
+              srcset="img/main-page/intro/can/1x/index-can-mobile.png 1x, img/main-page/intro/can/2x/index-can-mobile@2x.png 2x"
+              type="image/png" />
+
+            <source media="(min-width: 768px) and (max-width: 1279px)"
+              srcset="img/main-page/intro/can/1x/index-can-tablet.webp 1x, img/main-page/intro/can/2x/index-can-tablet@2x.webp 2x"
+              type="image/webp" />
+            <source media="(min-width: 768px) and (max-width: 1279px)"
+              srcset="img/main-page/intro/can/1x/index-can-tablet.jpg 1x, img/main-page/intro/can/2x/index-can-tablet@2x.jpg 2x"
+              type="image/jpeg" />
+
+            <source
+              srcset="img/main-page/intro/can/1x/index-can-desktop.webp 1x, img/main-page/intro/can/2x/index-can-desktop@2x.webp 2x"
+              type="image/webp" />
+            <source
+              srcset="img/main-page/intro/can/1x/index-can-desktop.png 1x, img/main-page/intro/can/2x/index-can-desktop@2x.png 2x"
+              type="image/png" />
+
+            <img src="img/main-page/intro/can/1x/index-can-tablet.jpg" alt="Can" />
+          </picture>
+        </div>
 
         <button class="intro__button button__action">
           подобрать программу
@@ -134,7 +167,8 @@
           <li class="advantages__item">
             <div class="advantages__picture">
               <picture>
-                <source media="(max-width: 767px)" srcset="img/main-page/advantages/second_advantage/cat-mobile-2.svg" />
+                <source media="(max-width: 767px)"
+                  srcset="img/main-page/advantages/second_advantage/cat-mobile-2.svg" />
                 <source media="(min-width: 768px) and (max-width: 1279px)"
                   srcset="img/main-page/advantages/second_advantage/cat-tablet-2.svg" />
                 <source media="(min-width: 1280px)"
@@ -272,7 +306,7 @@
       <div class="location__map">
         <iframe
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A4cf0462d168ac70caa6a3a54ea09cb9f3f025db436810b9afa321211cdb5f12f&amp;source=constructor"
-          width="100%" height="362" frameborder="0"></iframe>
+          width="100" height="362"></iframe>
       </div>
 
     </section>
