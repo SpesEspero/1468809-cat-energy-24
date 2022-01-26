@@ -97,26 +97,26 @@
   position: absolute;
   top: 0;
 
+  width: 50%;
   height: 100%;
+  overflow: hidden;
 
-  &.cat-fat {
-    left: 0%;
-
-    width: 50%;
-
-    background: url("../../img/main-page/example/cat-fat/1x/image-mobile.png")
-      left no-repeat;
-    background-size: 280px 232px;
+  &.cat-fat,
+  &.cat-fat img {
+    left: 0;
   }
 
-  &.cat-skinny {
+  &.cat-skinny,
+  &.cat-skinny img {
     right: 0;
+  }
 
-    width: 50%;
+  & img {
+    position: absolute;
+    top: 0;
 
-    background: url("../../img/main-page/example/cat-skinny/1x/image-mobile.png")
-      right no-repeat;
-    background-size: 280px 232px;
+    width: 280px;
+    height: 232px;
   }
 }
 
@@ -134,26 +134,8 @@
 
   width: 70%;
 
-  & p {
+  & span {
     .oswald-family();
-  }
-}
-
-@media (min-resolution: 2dppx) {
-  .example__background {
-    &.cat-fat {
-      background: url("../../img/main-page/example/cat-fat/2x/image-mobile@2x.png")
-        left no-repeat;
-
-      background-size: 280px 232px;
-    }
-
-    &.cat-skinny {
-      background: url("../../img/main-page/example/cat-skinny/2x/image-mobile@2x.png")
-        right no-repeat;
-
-      background-size: 280px 232px;
-    }
   }
 }
 
@@ -231,44 +213,18 @@
     margin-top: 28px;
     column-gap: 23px;
 
-    & p {
+    & span {
       border-bottom: 1px dotted #b2b2b2;
     }
   }
 
-  .example__control:hover p {
+  .example__control:hover span {
     border-bottom: 1px solid #b2b2b2;
   }
 
-  .example__background {
-    &.cat-fat {
-      background: url("../../img/main-page/example/cat-fat/1x/image-desktop.png")
-        left no-repeat;
-      background-size: 592px 511px;
-    }
-
-    &.cat-skinny {
-      background: url("../../img/main-page/example/cat-skinny/1x/image-desktop.png")
-        right no-repeat;
-      background-size: 592px 511px;
-    }
-  }
-
-  @media (min-resolution: 2dppx) {
-    .example__background {
-      &.cat-fat {
-        background: url("../../img/main-page/example/cat-fat/2x/image-desktop@2x.png")
-          left no-repeat;
-
-        background-size: 592px 511px;
-      }
-
-      &.cat-skinny {
-        background: url("../../img/main-page/example/cat-skinny/2x/image-desktop@2x.png")
-          right no-repeat;
-        background-size: 592px 511px;
-      }
-    }
+  .example__background img {
+    width: 592px;
+    height: 511px;
   }
 }
 

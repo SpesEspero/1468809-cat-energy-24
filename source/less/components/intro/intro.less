@@ -3,6 +3,8 @@
 }
 
 .intro__background {
+  display: block;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -10,9 +12,7 @@
   height: 63.3%;
   width: 100%;
 
-  background: url("../../img/main-page/intro/background/1x/background-mobile.jpg")
-    center no-repeat;
-  background-size: cover;
+  object-fit: cover;
 }
 
 .intro__text {
@@ -36,24 +36,18 @@
   .oswald-family();
 }
 
-.intro__image img {
+.intro__image {
   margin: 30px auto 0;
 
   display: block;
-}
 
-//Media
-@media (min-resolution: 2dppx) {
-  .intro__background {
-    background: url("../../img/main-page/intro/background/2x/background-mobile@2x.jpg")
-      center no-repeat;
-    background-size: cover;
-  }
+  width: auto;
+  height: auto;
 }
 
 @media (min-width: @tablet) {
   .intro__background {
-    background: none;
+    display: none;
   }
 
   .intro__text {
@@ -79,19 +73,12 @@
     font-size: 20px;
   }
 
-  .intro__image img {
+  .intro__image {
     margin-top: 20px;
   }
 
   .intro__button {
     font-size: 20px;
-  }
-
-  //Media
-  @media (min-resolution: 2dppx) {
-    .intro__background {
-      background: none;
-    }
   }
 }
 
@@ -109,9 +96,8 @@
     right: 0;
     width: 50%;
     height: 100%;
-    background: url("../../img/main-page/intro/background/1x/background-desktop.jpg")
-      center no-repeat;
-    background-size: cover;
+
+    display: block;
   }
 
   .intro__container {
@@ -132,7 +118,7 @@
     margin-bottom: 52px;
   }
 
-  .intro__image img {
+  .intro__image {
     position: absolute;
 
     top: 140px;
@@ -140,12 +126,5 @@
     margin: 0;
 
     pointer-events: none;
-  }
-
-  //Media
-  @media (min-resolution: 2dppx) {
-    background: url("../../img/main-page/intro/background/2x/background-desktop@2x.jpg")
-      center no-repeat;
-    background-size: cover;
   }
 }
