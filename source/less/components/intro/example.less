@@ -6,7 +6,9 @@
 }
 
 .example__title {
-  margin-bottom: 40px;
+  margin: 0 0 40px;
+
+  color: @black;
 }
 
 .example__info {
@@ -17,7 +19,9 @@
 }
 
 .example__text {
-  margin-bottom: 20px;
+  margin: 0 0 20px;
+
+  .arial-family();
 
   width: 100%;
 }
@@ -43,6 +47,10 @@
   border: 1px solid #cdcdcd;
   border-radius: 3px;
 
+  & h2 {
+    color: @black;
+  }
+
   & p {
     position: absolute;
     bottom: -22px;
@@ -58,15 +66,18 @@
 
     font-size: 12px;
     text-align: center;
+
+    margin: 0;
+
+    .arial-family();
   }
 }
 
 .example__result {
-  margin-top: 34px;
+  margin: 34px 0 0;
 
   width: 100%;
 
-  .oswald-family();
   text-align: center;
   text-transform: uppercase;
 
@@ -190,6 +201,10 @@
       white-space: nowrap;
 
       bottom: -8px;
+
+      font-size: 14px;
+
+      padding: 0 8px;
     }
   }
 

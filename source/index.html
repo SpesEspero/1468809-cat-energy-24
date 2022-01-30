@@ -25,6 +25,10 @@
   <meta name="msapplication-TileImage" content="./img/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
+
+  <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
+
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
@@ -77,24 +81,26 @@
   <main class="main">
     <section class="intro">
       <div class="container intro__container">
-        <picture>
-          <source media="(max-width: 767px)"
-            srcset="img/main-page/intro/background/1x/background-mobile.webp 1x, img/main-page/intro/background/2x/background-mobile@2x.webp 2x"
-            type="image/webp" />
-          <source media="(max-width: 767px)"
-            srcset="img/main-page/intro/background/1x/background-mobile.jpg 1x, img/main-page/intro/background/2x/background-mobile@2x.jpg 2x"
-            type="image/png" />
+        <div class="intro__background">
+          <picture>
+            <source media="(max-width: 767px)"
+              srcset="img/main-page/intro/background/1x/background-mobile.webp 1x, img/main-page/intro/background/2x/background-mobile@2x.webp 2x"
+              type="image/webp" />
+            <source media="(max-width: 767px)"
+              srcset="img/main-page/intro/background/1x/background-mobile.jpg 1x, img/main-page/intro/background/2x/background-mobile@2x.jpg 2x"
+              type="image/png" />
 
-          <source
-            srcset="img/main-page/intro/background/1x/background-desktop.webp 1x, img/main-page/intro/background/2x/background-desktop@2x.webp 2x"
-            type="image/webp" media="(min-width: 1280px)" />
-          <source
-            srcset="img/main-page/intro/background/1x/background-desktop.jpg 1x, img/main-page/intro/background/2x/background-desktop@2x.jpg 2x"
-            type="image/png" media="(min-width: 1280px)" />
+            <source
+              srcset="img/main-page/intro/background/1x/background-desktop.webp 1x, img/main-page/intro/background/2x/background-desktop@2x.webp 2x"
+              type="image/webp" media="(min-width: 1280px)" />
+            <source
+              srcset="img/main-page/intro/background/1x/background-desktop.jpg 1x, img/main-page/intro/background/2x/background-desktop@2x.jpg 2x"
+              type="image/png" media="(min-width: 1280px)" />
 
-          <img class="intro__background" src="img/main-page/intro/background/1x/background-desktop.jpg"
-            alt="Background cat" width="720" height="694" />
-        </picture>
+            <img src="img/main-page/intro/background/1x/background-desktop.jpg" alt="Background cat" width="720"
+              height="694" />
+          </picture>
+        </div>
 
         <div class="intro__text">
           <h1 class="intro__title">
@@ -367,7 +373,7 @@
           <span class="hidden">vk link</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="22" viewBox="0 0 28 22" fill="none"
             class="vk__icon">
-            <use class="vk__icon" href="img/sprite.svg#vk-icon" />
+            <use href="img/sprite.svg#vk-icon" />
           </svg>
         </a>
 

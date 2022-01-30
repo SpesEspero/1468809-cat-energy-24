@@ -2,12 +2,25 @@
   padding-top: 25px;
 }
 
+.additional__list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
 .additional__title {
   margin-bottom: 36px;
 
   padding-top: 20px;
 
   border-top: 1px solid #ebebeb;
+
+  & h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: @black;
+  }
 
   & span {
     background-color: @white;
@@ -36,7 +49,7 @@
 }
 
 .additional__product {
-  margin-bottom: 13px;
+  margin: 0 0 13px;
 }
 
 .additional__info {
@@ -45,6 +58,11 @@
   justify-content: space-between;
 
   margin-bottom: 16px;
+
+  & p {
+    margin: 0;
+    .arial-family();
+  }
 }
 
 .additional__surprise {
@@ -57,6 +75,8 @@
 
   width: 280px;
   min-height: 290px;
+
+  background-color: @green;
 }
 
 .gift__background {
@@ -89,6 +109,8 @@
   max-width: 161px;
 
   margin: 0 auto;
+
+  .arial-family();
 }
 
 @media (min-width: @tablet) {
@@ -117,10 +139,10 @@
 
   .additional__info {
     margin: 0 0 0 auto;
-  }
 
-  .additional__type {
-    margin-right: 50px;
+    & .additional__type {
+      margin-right: 50px;
+    }
   }
 
   .additional__button {
@@ -197,10 +219,10 @@
 
   .additional__info {
     margin: 0;
-  }
 
-  .additional__type {
-    margin-right: 0;
+    & .additional__type {
+      margin-right: 0;
+    }
   }
 
   .additional__button {
