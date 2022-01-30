@@ -3,8 +3,6 @@
 }
 
 .intro__background {
-  display: block;
-
   position: absolute;
   top: 0;
   left: 0;
@@ -12,7 +10,13 @@
   height: 63.3%;
   width: 100%;
 
-  object-fit: cover;
+  background-color: @green;
+
+  & img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .intro__text {
@@ -26,14 +30,14 @@
 
 .intro__title {
   padding-top: 27px;
+
+  margin: 0;
 }
 
 .intro__subtitle {
-  margin-top: 25px;
+  margin: 25px 0 0;
 
   text-transform: uppercase;
-
-  .oswald-family();
 }
 
 .intro__image {

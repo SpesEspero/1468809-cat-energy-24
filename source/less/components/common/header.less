@@ -46,6 +46,9 @@
 
   padding: 1px 4px;
 
+  background: none;
+  border: 0;
+
   & span {
     position: relative;
     display: block;
@@ -105,6 +108,9 @@
   left: 0;
   z-index: 500;
 
+  margin: 0;
+  padding: 0;
+
   width: 100%;
 }
 
@@ -124,7 +130,6 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 1;
-  color: @black;
   text-transform: uppercase;
 
   border-top: 1px solid #e6e6e6;
@@ -145,6 +150,7 @@
   }
 
   & a {
+    color: @black;
     position: relative;
   }
 
@@ -260,8 +266,6 @@
   }
 
   .header__nav-items {
-    color: @white;
-
     font-size: 20px;
 
     &:hover,
@@ -273,14 +277,16 @@
       color: #93c377;
     }
 
+    & a {
+      color: @white;
+    }
+
     & a::after {
       background-color: @white;
     }
   }
 
   .header__nav-dark .header__nav-items {
-    color: @black;
-
     &:hover,
     &:focus {
       color: #666666;
@@ -288,6 +294,10 @@
 
     &:active {
       color: #b3b3b3;
+    }
+
+    & a {
+      color: @black;
     }
 
     & a::after {

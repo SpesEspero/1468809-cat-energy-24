@@ -4,13 +4,20 @@
 }
 
 .howItWorks__title {
-  margin-bottom: 40px;
+  margin: 0 0 40px;
+
+  color: @black;
 }
 
 .howItWorks__list {
   display: grid;
 
   row-gap: 20px;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
 }
 
 .howItWorks__text {
@@ -18,8 +25,9 @@
   grid-template-columns: 60px auto;
   column-gap: 20px;
 
-  & span {
-    align-self: center;
+  & p {
+    .arial-family();
+    margin: 0;
   }
 
   &::before {
