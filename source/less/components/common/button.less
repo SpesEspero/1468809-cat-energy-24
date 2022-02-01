@@ -1,5 +1,5 @@
-.button__pseudo,
-.button__action {
+.button-pseudo,
+.button-action {
   font-size: 14px;
   font-family: "Oswald", "Arial", sans-serif;
   color: @white;
@@ -17,40 +17,46 @@
   transition: background 0.15s linear, color 0.15s linear;
 }
 
-.button__pseudo {
+a.button-action,
+a.button-pseudo {
+  display: inline-block;
+  text-align: center;
+}
+
+.button-pseudo {
   background: #f2f2f2;
   color: @default_color;
 }
 
-.button__pseudo:hover,
-.button__pseudo:focus {
+.button-pseudo:hover,
+.button-pseudo:focus {
   background: #ebebeb;
 }
 
-.button__pseudo:active {
+.button-pseudo:active {
   background: #ebebeb;
 
   color: rgba(68, 68, 68, 0.3);
 }
 
-.button__action {
+.button-action {
   background: @green;
 }
 
-.button__action:hover,
-.button__action:focus {
+.button-action:hover,
+.button-action:focus {
   background: #5eaa2f;
 }
 
-.button__action:active {
+.button-action:active {
   background: #5eaa2f;
 
   color: rgba(255, 255, 255, 0.3);
 }
 
 @media (min-width: @tablet) {
-  .button__pseudo,
-  .button__action {
+  .button-pseudo,
+  .button-action {
     width: auto;
 
     padding: 12px 26px;
